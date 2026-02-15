@@ -1,0 +1,14 @@
+*.env
+secrets.yaml
+ethera-workflow/config.production.json
+ethera-workflow/config.staging.json
+**/node_modules/
+**/dist/
+**/build/
+
+secrets.yaml
+ethera-workflow/config.production.json
+ethera-workflow/config.staging.json
+**/node_modules/
+**/dist/
+**/build/
