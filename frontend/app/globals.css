@@ -2,15 +2,13 @@
 @plugin "tailwindcss-animate";
 
 :root {
-  --background: #030303;
-  --foreground: #ededed;
-  --primary: #cc7a0e;
-  --primary-foreground: #ffffff;
-  --secondary: #734911;
-  --tertiary: #ffffff;
-  --highlight-1: #000000;
-  --highlight-2: #f7b052;
-  --highlight-3: #916120;
+  --background: #0E0E0E;
+  --foreground: #F5F5F0;
+  --primary: #C9A84C;
+  --primary-foreground: #0E0E0E;
+  --secondary: #1A1A18;
+  --muted: #9A9A8E;
+  --accent: #C9A84C;
 }
 
 @theme inline {
@@ -19,17 +17,15 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
-  --color-tertiary: var(--tertiary);
-  --color-highlight-1: var(--highlight-1);
-  --color-highlight-2: var(--highlight-2);
-  --color-highlight-3: var(--highlight-3);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
 }
 
 body {
   color: var(--foreground);
   background: transparent;
   /* Handled by Background component */
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
