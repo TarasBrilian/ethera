@@ -64,16 +64,16 @@ export default function Home() {
       </nav>
 
       {/* Section 1: Hero */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 px-6">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className={` text-3xl md:text-8xl font-bold leading-tight mb-8 transition-all duration-1000 opacity-0 translate-y-10 animate-fade-in`}>
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-snug md:leading-tight mb-6 md:mb-10 transition-all duration-1000 opacity-0 translate-y-10 animate-fade-in">
             The dollar you saved 10 years ago can't buy what it used to. <br className="hidden md:block" />
             <span className="text-[#C9A84C]">ETHERA can.</span>
           </h1>
-          <p className="text-lg md:text-xl text-[#9A9A8E] mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-300 opacity-0 translate-y-10 animate-fade-in">
+          <p className="text-base md:text-lg lg:text-xl text-[#9A9A8E] mb-10 md:mb-14 max-w-2xl mx-auto leading-relaxed md:leading-loose transition-all duration-1000 delay-300 opacity-0 translate-y-10 animate-fade-in">
             ETHERA is a stablecoin built to hold real value not a dollar price. Backed by hard assets and Ethereum, its purchasing power stays intact while everything else inflates away.
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 transition-all duration-1000 delay-500 opacity-0 translate-y-10 animate-fade-in">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 transition-all duration-1000 delay-500 opacity-0 translate-y-10 animate-fade-in">
             <Link href="/stake" className="px-10 py-5 bg-[#C9A84C] text-[#0E0E0E] font-bold text-lg rounded-sm hover:scale-105 transition-transform shadow-[0_0_30px_rgba(201,168,76,0.3)]">
               Mint ETHERA Free to Hold
             </Link>
@@ -88,43 +88,43 @@ export default function Home() {
       </section>
 
       {/* Section 2: Contrast Block */}
-      <section className="py-32 px-6">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* Left Card */}
-            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-[#1A1A18] border border-white/5 p-12 md:p-20 flex flex-col items-center text-center group">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-[#9A9A8E] mb-10 font-bold">Regular Stablecoins</span>
-              <div className="mb-12 relative w-24 h-24">
-                <div className="w-24 h-24 rounded-full border border-white/10 flex items-center justify-center group-hover:scale-95 transition-transform">
-                  <span className="text-3xl font-light text-white/20">$</span>
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-[#1A1A18] border border-white/5 p-8 md:p-16 lg:p-20 flex flex-col items-center text-center group">
+              <span className="text-[10px] uppercase tracking-[0.4em] text-[#9A9A8E] mb-8 md:mb-10 font-bold">Regular Stablecoins</span>
+              <div className="mb-8 md:mb-12 relative w-20 h-20 md:w-24 md:h-24">
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border border-white/10 flex items-center justify-center group-hover:scale-95 transition-transform">
+                  <span className="text-2xl md:text-3xl font-light text-white/20">$</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1A1A18]/50 to-[#1A1A18] h-full w-full opacity-60" />
               </div>
-              <h3 className="text-3xl font-light mb-4">Worth $1 today</h3>
-              <p className="text-[#9A9A8E] mb-2 font-light">Worth $1 in 10 years</p>
-              <p className="text-white/40 font-medium italic text-lg mt-4">But $1 buys less every year</p>
+              <h3 className="text-2xl md:text-3xl font-light mb-3 md:mb-4 leading-snug">Worth $1 today</h3>
+              <p className="text-[#9A9A8E] mb-2 font-light text-sm md:text-base leading-relaxed">Worth $1 in 10 years</p>
+              <p className="text-white/40 font-medium italic text-base md:text-lg mt-4 leading-relaxed">But $1 buys less every year</p>
             </div>
 
             {/* Right Card */}
-            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 bg-[#1A1A18] border border-[#C9A84C]/30 p-12 md:p-20 flex flex-col items-center text-center relative overflow-hidden group">
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 bg-[#1A1A18] border border-[#C9A84C]/30 p-8 md:p-16 lg:p-20 flex flex-col items-center text-center relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-6">
                 <div className="w-2 h-2 bg-[#C9A84C] rounded-full animate-ping" />
               </div>
-              <span className="text-[10px] uppercase tracking-[0.4em] text-[#C9A84C] mb-10 font-bold">ETHERA</span>
-              <div className="mb-12">
-                <div className="w-24 h-24 rounded-full bg-[#C9A84C] flex items-center justify-center shadow-[0_0_50px_rgba(201,168,76,0.25)] group-hover:scale-110 transition-transform">
-                  <svg viewBox="0 0 24 24" className="w-12 h-12 text-[#0E0E0E]" fill="currentColor">
+              <span className="text-[10px] uppercase tracking-[0.4em] text-[#C9A84C] mb-8 md:mb-10 font-bold">ETHERA</span>
+              <div className="mb-8 md:mb-12">
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#C9A84C] flex items-center justify-center shadow-[0_0_50px_rgba(201,168,76,0.25)] group-hover:scale-110 transition-transform">
+                  <svg viewBox="0 0 24 24" className="w-10 h-10 md:w-12 md:h-12 text-[#0E0E0E]" fill="currentColor">
                     <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" />
                   </svg>
                 </div>
               </div>
-              <h3 className="text-3xl font-light mb-4 text-[#F5F5F0]">Buys a coffee today</h3>
-              <p className="text-[#9A9A8E] mb-2 font-light">Buys a coffee in 10 years</p>
-              <p className="text-[#C9A84C] font-bold text-lg mt-4 uppercase tracking-widest">Same real value. Always.</p>
+              <h3 className="text-2xl md:text-3xl font-light mb-3 md:mb-4 text-[#F5F5F0] leading-snug">Buys a coffee today</h3>
+              <p className="text-[#9A9A8E] mb-2 font-light text-sm md:text-base leading-relaxed">Buys a coffee in 10 years</p>
+              <p className="text-[#C9A84C] font-bold text-base md:text-lg mt-4 uppercase tracking-widest leading-relaxed">Same real value. Always.</p>
             </div>
           </div>
-          <div className="mt-20 text-center">
-            <p className="text-xl md:text-2xl text-[#9A9A8E] font-light max-w-2xl mx-auto italic leading-relaxed">
+          <div className="mt-16 md:mt-20 text-center">
+            <p className="text-lg md:text-xl lg:text-2xl text-[#9A9A8E] font-light max-w-2xl mx-auto italic leading-relaxed md:leading-loose">
               "ETHERA doesn't track a price. It tracks what money is supposed to do."
             </p>
           </div>
@@ -132,32 +132,32 @@ export default function Home() {
       </section>
 
       {/* Section 3: How It Works */}
-      <section id="how-it-works" className="py-40 px-6 bg-[#0B0B0A]">
+      <section id="how-it-works" className="py-24 md:py-40 px-6 bg-[#0B0B0A]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
             {/* Step 1 */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-              <div className="w-12 h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-10 text-sm font-mono font-bold">01</div>
-              <h3 className={` text-2xl font-bold mb-6`}>Deposit ETH</h3>
-              <p className="text-[#9A9A8E] text-lg leading-relaxed font-light">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">01</div>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 leading-snug">Deposit ETH</h3>
+              <p className="text-[#9A9A8E] text-base md:text-lg leading-relaxed md:leading-loose font-light">
                 Lock your ETH as collateral. It keeps earning staking yield while you hold ETHERA.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
-              <div className="w-12 h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-10 text-sm font-mono font-bold">02</div>
-              <h3 className={` text-2xl font-bold mb-6 text-[#F5F5F0]`}>Mint ETHERA at 0% Interest</h3>
-              <p className="text-[#9A9A8E] text-lg leading-relaxed font-light">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">02</div>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#F5F5F0] leading-snug">Mint ETHERA at 0% Interest</h3>
+              <p className="text-[#9A9A8E] text-base md:text-lg leading-relaxed md:leading-loose font-light">
                 Your staking yield covers the cost. You borrow against real value, not a dollar price.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400">
-              <div className="w-12 h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-10 text-sm font-mono font-bold">03</div>
-              <h3 className={` text-2xl font-bold mb-6`}>Hold Money That Holds Its Worth</h3>
-              <p className="text-[#9A9A8E] text-lg leading-relaxed font-light">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">03</div>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 leading-snug">Hold Money That Holds Its Worth</h3>
+              <p className="text-[#9A9A8E] text-base md:text-lg leading-relaxed md:leading-loose font-light">
                 ETHERA's value is updated in real time using gold, energy prices, and onchain data so inflation can't eat it.
               </p>
             </div>
@@ -166,47 +166,47 @@ export default function Home() {
       </section>
 
       {/* Section 4: Social Proof / Trust Anchors */}
-      <section className="py-24 px-6 border-y border-white/5">
+      <section className="py-16 md:py-24 px-6 border-y border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
             <div className="flex flex-col items-center md:items-start text-center md:text-left animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
-              <div className="text-[#C9A84C] mb-6">
-                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-[#C9A84C] mb-4 md:mb-6">
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h4 className="font-bold text-lg text-[#F5F5F0] mb-2">CRE as Chainlink Oracles</h4>
-              <p className="text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.2em]">Real-time price verification</p>
+              <h4 className="font-bold text-base md:text-lg text-[#F5F5F0] mb-2 leading-snug">CRE as Chainlink Oracles</h4>
+              <p className="text-[9px] md:text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">Real-time price verification</p>
             </div>
 
             <div className="flex flex-col items-center md:items-start text-center md:text-left animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
-              <div className="text-[#C9A84C] mb-6">
-                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-[#C9A84C] mb-4 md:mb-6">
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h4 className="font-bold text-lg text-[#F5F5F0] mb-2">ETH Collateral</h4>
-              <p className="text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.2em]">Backed by the hardest onchain asset</p>
+              <h4 className="font-bold text-base md:text-lg text-[#F5F5F0] mb-2 leading-snug">ETH Collateral</h4>
+              <p className="text-[9px] md:text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">Backed by the hardest onchain asset</p>
             </div>
 
             <div className="flex flex-col items-center md:items-start text-center md:text-left animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
-              <div className="text-[#C9A84C] mb-6">
-                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-[#C9A84C] mb-4 md:mb-6">
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h4 className="font-bold text-lg text-[#F5F5F0] mb-2">Open Source</h4>
-              <p className="text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.2em]">Fully auditable smart contracts</p>
+              <h4 className="font-bold text-base md:text-lg text-[#F5F5F0] mb-2 leading-snug">Open Source</h4>
+              <p className="text-[9px] md:text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">Fully auditable smart contracts</p>
             </div>
 
             <div className="flex flex-col items-center md:items-start text-center md:text-left animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-300">
-              <div className="text-[#C9A84C] mb-6">
-                <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="text-[#C9A84C] mb-4 md:mb-6">
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="font-bold text-lg text-[#F5F5F0] mb-2">0% Mint Interest</h4>
-              <p className="text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.2em]">Yield-funded, not debt-funded</p>
+              <h4 className="font-bold text-base md:text-lg text-[#F5F5F0] mb-2 leading-snug">0% Mint Interest</h4>
+              <p className="text-[9px] md:text-[10px] text-[#9A9A8E] font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] leading-relaxed">Yield-funded, not debt-funded</p>
             </div>
           </div>
         </div>
