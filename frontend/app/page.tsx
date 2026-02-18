@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,13 +36,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#0E0E0E] text-[#F5F5F0] overflow-x-hidden selection:bg-[#C9A84C]/30 relative z-[60]">
-      {/* Hide global components that might be in layout */}
       <style jsx global>{`
         nav:not(#ethera-nav), #global-background { display: none !important; }
         body { background-color: #0E0E0E !important; }
       `}</style>
-
-      {/* Navigation Bar */}
       <nav
         id="ethera-nav"
         className={`fixed top-0 left-0 w-full z-[70] transition-all duration-500 px-6 py-4 md:px-12 md:py-6 ${isScrolled ? "bg-[#0E0E0E]/90 backdrop-blur-md border-b border-white/5" : "bg-transparent"
@@ -63,7 +61,6 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Section 1: Hero */}
       <section className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-snug md:leading-tight mb-6 md:mb-10 transition-all duration-1000 opacity-0 translate-y-10 animate-fade-in">
@@ -71,11 +68,11 @@ export default function Home() {
             <span className="text-[#C9A84C]">ETHERA can.</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-[#9A9A8E] mb-10 md:mb-14 max-w-2xl mx-auto leading-relaxed md:leading-loose transition-all duration-1000 delay-300 opacity-0 translate-y-10 animate-fade-in">
-            ETHERA is a stablecoin built to hold real value not a fiat price. Backed by hard assets and Ethereum, its purchasing power stays intact while everything else inflates away.
+            ETHERA is a stable unit assets built to hold real value not a fiat price. Backed by global purchasing power, its purchasing power stays intact while everything else inflates away.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 transition-all duration-1000 delay-500 opacity-0 translate-y-10 animate-fade-in">
             <Link href="/stake" className="px-10 py-5 bg-[#C9A84C] text-[#0E0E0E] font-bold text-lg rounded-sm hover:scale-105 transition-transform shadow-[0_0_30px_rgba(201,168,76,0.3)]">
-              Mint ETHERA Free to Hold
+              Mint TPPU
             </Link>
             <a href="#how-it-works" className="text-[#9A9A8E] hover:text-[#F5F5F0] transition-colors group text-lg font-medium">
               See how it keeps its value <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -83,17 +80,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Subtle Background Accent */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-[#C9A84C]/5 rounded-full blur-[150px] pointer-events-none -z-10" />
       </section>
 
-      {/* Section 2: Contrast Block */}
       <section className="py-20 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* Left Card */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-[#1A1A18] border border-white/5 p-8 md:p-16 lg:p-20 flex flex-col items-center text-center group">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-[#9A9A8E] mb-8 md:mb-10 font-bold">Regular Stablecoins</span>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-[#9A9A8E] mb-8 md:mb-10 font-bold">Fiat</span>
               <div className="mb-8 md:mb-12 relative w-20 h-20 md:w-24 md:h-24">
                 <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border border-white/10 flex items-center justify-center group-hover:scale-95 transition-transform">
                   <span className="text-2xl md:text-3xl font-light text-white/20">$</span>
@@ -105,18 +100,13 @@ export default function Home() {
               <p className="text-white/40 font-medium italic text-base md:text-lg mt-4 leading-relaxed">But $1 buys less every year</p>
             </div>
 
-            {/* Right Card */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200 bg-[#1A1A18] border border-[#C9A84C]/30 p-8 md:p-16 lg:p-20 flex flex-col items-center text-center relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-6">
                 <div className="w-2 h-2 bg-[#C9A84C] rounded-full animate-ping" />
               </div>
               <span className="text-[10px] uppercase tracking-[0.4em] text-[#C9A84C] mb-8 md:mb-10 font-bold">ETHERA</span>
               <div className="mb-8 md:mb-12">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#C9A84C] flex items-center justify-center shadow-[0_0_50px_rgba(201,168,76,0.25)] group-hover:scale-110 transition-transform">
-                  <svg viewBox="0 0 24 24" className="w-10 h-10 md:w-12 md:h-12 text-[#0E0E0E]" fill="currentColor">
-                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" />
-                  </svg>
-                </div>
+                <Image src="/image.png" alt="Ethera" width={120} height={120} />
               </div>
               <h3 className="text-2xl md:text-3xl font-light mb-3 md:mb-4 text-[#F5F5F0] leading-snug">Buys a coffee today</h3>
               <p className="text-[#9A9A8E] mb-2 font-light text-sm md:text-base leading-relaxed">Buys a coffee in 10 years</p>
@@ -131,11 +121,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 3: How It Works */}
       <section id="how-it-works" className="py-24 md:py-40 px-6 bg-[#0B0B0A]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
-            {/* Step 1 */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">01</div>
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 leading-snug">Deposit ETH</h3>
@@ -144,7 +132,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Step 2 */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-200">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">02</div>
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#F5F5F0] leading-snug">Mint ETHERA at 0% Interest</h3>
@@ -153,7 +140,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Step 3 */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-400">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">03</div>
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 leading-snug">Hold Money That Holds Its Worth</h3>
@@ -165,7 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: Social Proof / Trust Anchors */}
       <section className="py-16 md:py-24 px-6 border-y border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-8">
@@ -212,7 +197,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 5: Philosophical Anchor */}
       <section className="py-48 px-6 bg-[#000000] relative overflow-hidden">
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <blockquote className={`animate-on-scroll opacity-0 translate-y-10 transition-all duration-1000  text-4xl md:text-6xl leading-tight mb-16 italic font-light`}>
@@ -225,7 +209,6 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[40vh] bg-[#C9A84C]/2 blur-[120px] -z-0" />
       </section>
 
-      {/* Section 6: Final CTA */}
       <section className="py-40 px-6">
         <div className="max-w-4xl mx-auto text-center border-x border-b border-[#C9A84C]/20 bg-[#1A1A18] p-16 md:p-32 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-[#C9A84C]" />
@@ -243,7 +226,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-24 px-6 bg-[#000000] border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-20 mb-24">
@@ -294,7 +276,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Hero Animation Styles */}
       <style jsx>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(20px); }
