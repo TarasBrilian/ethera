@@ -295,8 +295,8 @@ export default function StakeCard() {
             </AnimatePresence>
 
             <div className="text-center mb-10">
-                <h1 className="text-4xl font-bold text-[#F5F5F0] mb-3 tracking-tight">Mint ETHERA</h1>
-                <p className="text-[#9A9A8E] text-sm uppercase tracking-widest font-medium">Borrow against purchasing power</p>
+                <h1 className="text-4xl font-bold text-[#F5F5F0] mb-3 tracking-tight">Mint TPPU</h1>
+                <p className="text-[#9A9A8E] text-sm uppercase tracking-widest font-medium">Thera Purchasing Power Unit</p>
             </div>
 
             <div className="bg-[#1A1A18] border border-white/5 rounded-sm p-8 shadow-2xl relative overflow-hidden group">
@@ -343,7 +343,7 @@ export default function StakeCard() {
                     </div>
 
                     <div className="space-y-3">
-                        <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#9A9A8E] ml-1">Receive ETHERA</label>
+                        <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#9A9A8E] ml-1">Receive TPPU</label>
                         <div className="bg-black/40 border border-white/5 rounded-sm px-5 py-4 flex items-center justify-between">
                             <div className="flex items-center gap-4 flex-1">
                                 <div className="w-6 h-6 shrink-0 relative">
