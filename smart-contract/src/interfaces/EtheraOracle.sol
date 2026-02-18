@@ -2,10 +2,10 @@
 pragma solidity ^0.8.20;
 
 /**
- * @title IKalaOracle
- * @notice Interface for KALA/USD price oracle
+ * @title IEtheraOracle
+ * @notice Interface for ETHERA/USD price oracle
  */
-interface IKalaOracle {
-    /// @notice Returns KALA/USD price with 18 decimals
+interface IEtheraOracle {
+    /// @notice Returns ETHERA/USD price with 18 decimals
     function price() external view returns (uint256);
 }

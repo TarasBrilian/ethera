@@ -5,22 +5,22 @@ contract SaveBuffer {
     uint256 public totalYieldReceived;
     uint256 public totalInsuranceClaimed;
 
-    address public immutable KALA_PROTOCOL;
+    address public immutable ETHERA_PROTOCOL;
 
     event StakingInterestReceived(address indexed from, uint256 amount);
     event InsuranceBailout(address indexed target, uint256 amount);
 
     modifier onlyProtocol() {
         require(
-            msg.sender == KALA_PROTOCOL,
-            "SaveBuffer: Only KALA Protocol can trigger"
+            msg.sender == ETHERA_PROTOCOL,
+            "SaveBuffer: Only ETHERA Protocol can trigger"
         );
         _;
     }
 
-    constructor(address _kalaProtocol) {
-        require(_kalaProtocol != address(0), "Invalid address");
-        KALA_PROTOCOL = _kalaProtocol;
+    constructor(address _etheraProtocol) {
+        require(_etheraProtocol != address(0), "Invalid address");
+        ETHERA_PROTOCOL = _etheraProtocol;
     }
 
     receive() external payable {

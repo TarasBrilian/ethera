@@ -17,7 +17,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider, http } from 'wagmi';
 
 const config = getDefaultConfig({
-    appName: 'KALA Protocol',
+    appName: 'ETHERA Protocol',
     projectId: 'YOUR_PROJECT_ID',
     chains: [
         sepolia,

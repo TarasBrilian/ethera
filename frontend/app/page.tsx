@@ -67,11 +67,11 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-snug md:leading-tight mb-6 md:mb-10 transition-all duration-1000 opacity-0 translate-y-10 animate-fade-in">
-            The dollar you saved 10 years ago can't buy what it used to. <br className="hidden md:block" />
+            The fiat you saved 10 years ago can't buy what it used to. <br className="hidden md:block" />
             <span className="text-[#C9A84C]">ETHERA can.</span>
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-[#9A9A8E] mb-10 md:mb-14 max-w-2xl mx-auto leading-relaxed md:leading-loose transition-all duration-1000 delay-300 opacity-0 translate-y-10 animate-fade-in">
-            ETHERA is a stablecoin built to hold real value not a dollar price. Backed by hard assets and Ethereum, its purchasing power stays intact while everything else inflates away.
+            ETHERA is a stablecoin built to hold real value not a fiat price. Backed by hard assets and Ethereum, its purchasing power stays intact while everything else inflates away.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 transition-all duration-1000 delay-500 opacity-0 translate-y-10 animate-fade-in">
             <Link href="/stake" className="px-10 py-5 bg-[#C9A84C] text-[#0E0E0E] font-bold text-lg rounded-sm hover:scale-105 transition-transform shadow-[0_0_30px_rgba(201,168,76,0.3)]">
@@ -149,7 +149,7 @@ export default function Home() {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] mb-6 md:mb-8 text-sm font-mono font-bold">02</div>
               <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-[#F5F5F0] leading-snug">Mint ETHERA at 0% Interest</h3>
               <p className="text-[#9A9A8E] text-base md:text-lg leading-relaxed md:leading-loose font-light">
-                Your staking yield covers the cost. You borrow against real value, not a dollar price.
+                Your staking yield covers the cost. You borrow against real value, not a fiat price.
               </p>
             </div>
 

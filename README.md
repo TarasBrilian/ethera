@@ -33,11 +33,11 @@ Limitations are explicitly acknowledged, not hidden.*
 
 ### 1.1 The Problem Being Solved
 
-All existing stablecoins share the same structural flaw: they are stable against the dollar, but the dollar itself is not stable against purchasing power.
+All existing stablecoins share the same structural flaw: they are stable against the fiat, but the fiat itself is not stable against purchasing power.
 
 USDC, USDT, and DAI may maintain their peg, but their real value declines over time due to inflation.
 
-> **Example:** U.S. CPI in 2022 reached 8.5% YoY. That means $1,000 USDC held at the beginning of 2022 had the purchasing power of only $922 by the end of the year. Not because USDC depegged, but because the dollar weakened.
+> **Example:** U.S. CPI in 2022 reached 8.5% YoY. That means $1,000 USDC held at the beginning of 2022 had the purchasing power of only $922 by the end of the year. Not because USDC depegged, but because the fiat weakened.
 
 **Core Insight:**
 DeFi has successfully solved censorship resistance and permissionlessness.

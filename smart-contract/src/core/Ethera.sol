@@ -141,7 +141,7 @@ contract Ethera is EtheraUnit, ReentrancyGuard {
             position.lastRepayTime = block.timestamp;
         }
 
-        // Burn KALA tokens
+        // Burn TPPU tokens
         _burn(msg.sender, etheraAmount);
 
         emit Repay(msg.sender, etheraAmount, position.debt);
