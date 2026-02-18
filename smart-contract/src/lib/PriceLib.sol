@@ -10,21 +10,21 @@ library PriceLib {
 
     error ZeroDenominator();
 
-    function deriveEthKala(
+    function deriveEthTppu(
         uint256 ethUsdPrice,
-        uint256 kalaUsdPrice
+        uint256 tppuUsdPrice
     ) internal pure returns (uint256) {
-        if (kalaUsdPrice == 0) revert ZeroDenominator();
-        return Math.mulDiv(ethUsdPrice, PRECISION, kalaUsdPrice);
+        if (tppuUsdPrice == 0) revert ZeroDenominator();
+        return Math.mulDiv(ethUsdPrice, PRECISION, tppuUsdPrice);
     }
 
-    function deriveKalaUsdc(
-        uint256 kalaUsdPrice,
+    function deriveTppuUsdc(
+        uint256 tppuUsdPrice,
         uint256 usdcUsdPrice
     ) internal pure returns (uint256) {
         if (usdcUsdPrice == 0) revert ZeroDenominator();
         uint256 usdcScaled = usdcUsdPrice * 1e10;
-        return Math.mulDiv(kalaUsdPrice, PRECISION, usdcScaled);
+        return Math.mulDiv(tppuUsdPrice, PRECISION, usdcScaled);
     }
 
     function ethToUsd(
@@ -33,11 +33,11 @@ library PriceLib {
     ) internal pure returns (uint256) {
         return Math.mulDiv(ethAmount, ethUsdPrice, PRECISION);
     }
-    function usdToKala(
+    function usdToTppu(
         uint256 usdValue,
-        uint256 kalaUsdPrice
+        uint256 tppuUsdPrice
     ) internal pure returns (uint256) {
-        if (kalaUsdPrice == 0) revert ZeroDenominator();
-        return Math.mulDiv(usdValue, PRECISION, kalaUsdPrice);
+        if (tppuUsdPrice == 0) revert ZeroDenominator();
+        return Math.mulDiv(usdValue, PRECISION, tppuUsdPrice);
     }
 }
