@@ -21,7 +21,9 @@ contract EtheraUnit is ERC20, ERC20Pausable {
         uint256 sharesValue
     );
 
-    constructor() ERC20("Ethera Unit", "ETHERA") {}
+    constructor() ERC20("Thera Units", "TU") {
+        _mintInitialShares(1000000000 * 1e18);
+    }
 
     function mintShares(address recipient, uint256 sharesAmount) internal {
         if (sharesAmount == 0) {
